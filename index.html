@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Word Guessing Game</title>
+    <link rel="icon" href="guessWord2.png" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <div class="wrapper">
+      <h1>Guess The Word</h1>
+      <div class="content">
+        <div class="inputs"></div>
+
+        <div class="inputting">
+          <label for="typing-input">Input: </label
+          ><input
+            type="text"
+            class="typing-input"
+            id="typing-input"
+            maxlength="1"
+            placeholder="Try Your Character Here"
+          />
+        </div>
+
+        <div class="details">
+          <p class="hint">Hint: <span>Hint Will be shown here</span></p>
+          <p class="guess-left">Remaining Guesses: <span>10</span></p>
+          <p class="wrong-letter">Wrong Letters: <span></span></p>
+        </div>
+
+        <button class="reset-btn">Reset Game</button>
+      </div>
+    </div>
+
+    <!-- pop up part -->
+    <section class="pop-up-container">
+      <div class="card-confirmation">
+        <img src="check-icon-1.png" alt="" />
+        <h2>Horray! You are Awesome 🎉😍💓</h2>
+        <p>Keep it up Man 🙌😉</p>
+        <button class="btn-close" onclick="hide_pop_conformation()">
+          Close
+        </button>
+      </div>
+
+      <div class="card-warning">
+        <img src="warning2.png" alt="" />
+        <h2>Game Over! You Suck Dude 😂</h2>
+        <p>keep Trying, you can do it 😘</p>
+        <button class="btn-close" onclick="hide_pop_warning()">Close</button>
+      </div>
+    </section>
+    <!-- pop up part -->
+    <script src="words.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
